@@ -1,22 +1,20 @@
-import OpenAI from "openai"
+import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-})
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
-export async function POST(req: Request) {
-
-  const { message } = await req.json()
+export async function POST(req: { json: () => PromiseLike<{ message: any; }> | { message: any; }; }) {
+  const { message } = await req.json();
 
   const completion = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
-      { role: "system", content: "You are Anand Prakash's portfolio assistant" },
       { role: "user", content: message }
-    ]
-  })
+    ],
+  });
 
   return Response.json({
-    reply: completion.choices[0].message.content
-  })
+    reply: completion.choices[0].message.content,
+  });
 }
