@@ -1,23 +1,12 @@
-"use client"
+"use client";
 
-import GitHubCalendar from "react-github-calendar"
+import GitHubCalendar from "react-github-calendar";
 
-export default function GithubGraph(){
-
-return(
-
-<section className="py-20 text-center">
-
-<h2 className="text-3xl font-bold mb-8">
-
-GitHub Activity
-
-</h2>
-
-<GitHubCalendar username="YOUR_GITHUB_USERNAME" />
-
-</section>
-
-)
-
+export default function GithubGraph() {
+  return (
+    <div>
+      <h2>GitHub Contributions</h2>
+      <GitHubCalendar username="https://github.com/0913Anand" />
+    </div>
+  );
 }
