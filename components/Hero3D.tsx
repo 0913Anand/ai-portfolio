@@ -1,28 +1,30 @@
 "use client"
 
 import { Canvas } from "@react-three/fiber"
-import { Float, OrbitControls } from "@react-three/drei"
+import { Float } from "@react-three/drei"
 
-export default function Hero3D() {
+export default function Hero3D(){
 
-  return (
+return(
 
-    <Canvas style={{ height: "500px" }}>
+<Canvas style={{height:"500px"}}>
 
-      <ambientLight intensity={0.6} />
+<ambientLight intensity={0.5} />
 
-      <Float speed={2}>
+<Float>
 
-        <mesh>
-          <sphereGeometry args={[2, 32, 32]} />
-          <meshStandardMaterial color="#3b82f6" />
-        </mesh>
+<mesh>
 
-      </Float>
+<sphereGeometry args={[2,32,32]} />
 
-      <OrbitControls enableZoom={false} />
+<meshStandardMaterial color="#6366f1"/>
 
-    </Canvas>
+</mesh>
 
-  )
+</Float>
+
+</Canvas>
+
+)
+
 }

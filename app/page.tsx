@@ -1,16 +1,19 @@
+import AppleHero from "@/components/AppleHero"
 import Hero3D from "@/components/Hero3D"
-import Projects from "@/components/Projects"
+import GithubGraph from "@/components/GithubGraph"
 import AIChat from "@/components/AIChat"
 
 export default function Home(){
 
 return(
 
-<main>
+<main className="bg-black text-white">
+
+<AppleHero/>
 
 <Hero3D/>
 
-<Projects/>
+<GithubGraph/>
 
 <AIChat/>
 
